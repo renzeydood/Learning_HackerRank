@@ -2,9 +2,11 @@
 Helper functions to make arrays from user inputs
 '''
 
-def array_1d():
+def array_1d(size=None):
     arr = []
-    size = int(input("Size of Array: "))
+
+    if(size is None):
+        size = int(input("Size of Array: "))
     
     for i in range(size):
         arr.append(int(input("Value at {0}: ".format(i))))
@@ -27,3 +29,6 @@ def array_sq():
     
     print("Size: {0}, Array: {1}".format(size, arr))
     return arr
+
+def num_pair(text=None):
+    return map(int, input(text).split())
