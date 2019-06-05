@@ -15,9 +15,10 @@ def array_1d(size=None):
     
     return arr
 
-def array_sq():
+def array_sq(size=None):
     arr = []
-    size = int(input("Size of Square Matrix: "))
+    if(size is None):
+        size = int(input("Size of Square Matrix: "))
     
     for outer in range(size):
         arrIn = []
